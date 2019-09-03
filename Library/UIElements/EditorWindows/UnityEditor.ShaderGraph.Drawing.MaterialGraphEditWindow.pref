@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12386, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Keys:
+  - __PanelContainer__rootVisualContainer__1a30267e03f02f14f9955da59b6b25e8__MaterialGraphView__UnityEditor.Experimental.UIElements.GraphView.GraphView+PersistedViewTransform
+  - __PanelContainer__rootVisualContainer__1a30267e03f02f14f9955da59b6b25e8__MaterialGraphView__UnityEditor.Experimental.UIElements.GraphView.GraphView+PersistedSelection
+  - __PanelContainer__rootVisualContainer__d67d18be585c135409344836568dda1c__MaterialGraphView__UnityEditor.Experimental.UIElements.GraphView.GraphView+PersistedViewTransform
+  - __PanelContainer__rootVisualContainer__d67d18be585c135409344836568dda1c__MaterialGraphView__UnityEditor.Experimental.UIElements.GraphView.GraphView+PersistedSelection
+  m_Values:
+  - '{}'
+  - '{}'
+  - '{"position":{"x":1626.5966796875,"y":219.15325927734376,"z":0.0},"scale":{"x":0.6575162410736084,"y":0.6575162410736084,"z":1.0}}'
+  - '{"m_Version":906,"m_SelectedElementsArray":["241c6764-03a0-4812-b462-2a93f2f0cedd","0bbb2c12-eb7a-4940-9d8f-5ec68e6697dd","54485acf-9dc3-47ab-845d-bd7236608280","83f8c54c-e40b-4091-ad6d-fa6b0087427b","bf30cf98-901c-4f4c-a32b-da7720b60b8a","b1f611e5-ca39-47e0-b1fb-f74e94de3477","d6f852a0-7e11-4810-a1d3-28fb9c9d7bac","24e8c70e-dae9-4a4f-bc4f-5d0f4f6abfc0","aab1bb06-2965-4670-a2c7-17307ba4ce20","8360edd6-94e1-41a6-bf61-3c2ead663631","b3ebccdd-ebc5-4aa4-b743-e61a4e2c1392","a6f24ab3-2f28-4fd3-ba73-e68c9ad1da89","c462e112-2b96-4657-a4db-527c9ae28043","a2c88d4b-8a5b-4dd4-b550-6e6c3142b70b","945356af-fcec-4a39-84fd-e830948cc652","f5d57033-d91b-40ab-a1e8-01a294c7b684","65656de1-bc7f-4efc-a113-26651f8844af","8bdc5449-33ca-46c6-9f78-0fc15ce253d5","6812da02-0dde-4daa-86fd-9540b3a84339","9077e227-fbe4-4c99-a33c-ad34499d3273","acea5def-3918-4350-9f6f-7a3190129c83","435eb4ab-388b-4d7e-91d8-782c5ff9006b","d6524c72-1276-4dd0-933e-07673df433a8","d5a919b9-9c6e-41c3-a83f-f2a53cebdd49","871c6195-e70f-457c-85e3-3b4f7bb5906f","41cb15dc-0804-4a96-86bb-32f04e1851b9","d0ba2fb5-f124-4e82-a8f2-8932f774989c","a0e0f6c5-9430-47fc-abe8-5461bc3c6341","ff350f2f-d21c-4958-8256-d39400578426","20a78170-0211-45f2-8be0-4e1ce5c12f1f","38328e8e-67bd-46ef-b3a8-c733ad309cc6","55633b50-4f17-4afd-98d4-36729da446eb","0d819e6c-b545-41b6-8b6c-070c213aafc0","904a1b4d-1727-43a4-bea6-8c6edf1b4cd9","c6fd8d68-a5fb-46b9-be54-b0889d4acd89","72def669-fa21-4353-899e-23e1c84f6636","5b8fd87c-58b4-41dc-a844-8768ce30ee88","067cd092-361c-4db1-a7df-f3a032a86cf8","dd8978cc-8325-4f3f-9de7-c70bc27c08ff","4a44ea7c-c9da-4cda-b8b1-6e2a1476ee07","3f956a8a-ebd4-4a5a-9b17-84c5bf51548c","86c9576d-9202-47e7-85ce-4ff99620ef3d","bfefe9a5-815c-4d47-b518-4cc3bed102e7","4939df5e-704a-44c4-9fd9-3fa29894a77f","c8c7c12f-3acf-46db-813e-655b2bb37ed3","4dabc0c5-fce4-43b4-8a33-553e1eff2fb6","2f0fd6fb-9e59-4888-a06e-828f3b54856e"]}'
