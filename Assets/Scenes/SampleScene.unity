@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 0.32316238, g: 0.4688409, b: 0.77501065, a: 1}
+  m_IndirectSpecularColor: {r: 0.3249875, g: 0.4714463, b: 0.7752154, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -400,7 +400,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400058, guid: 698024d87556e3445be0549a0954c67f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0.323
       objectReference: {fileID: 0}
     - target: {fileID: 400058, guid: 698024d87556e3445be0549a0954c67f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -408,7 +408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400058, guid: 698024d87556e3445be0549a0954c67f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.491
       objectReference: {fileID: 0}
     - target: {fileID: 400058, guid: 698024d87556e3445be0549a0954c67f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -461,7 +461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: 89f1721403702a24e971148eeb43c83a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 1.11
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: 89f1721403702a24e971148eeb43c83a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -469,7 +469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: 89f1721403702a24e971148eeb43c83a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: -0.56
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: 89f1721403702a24e971148eeb43c83a, type: 3}
       propertyPath: m_LocalRotation.x
@@ -984,8 +984,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297650280}
-  m_LocalRotation: {x: -0.06770261, y: 0.92463154, z: -0.1959319, w: -0.3195054}
-  m_LocalPosition: {x: 2.8513455, y: 1.1870644, z: 0.0058989525}
+  m_LocalRotation: {x: 0.07732813, y: -0.901139, z: 0.18023045, w: 0.3866341}
+  m_LocalPosition: {x: 3.572995, y: 2.5532968, z: 1.9458289}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1783,7 +1783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Beauty: {fileID: 313982868}
   Beast: {fileID: 1997226130}
-  VFX: {fileID: 0}
+  VFX: {fileID: 3471259557968167913, guid: f052ff9943c099947b9a98548c1ca47c, type: 3}
 --- !u!4 &2067889761
 Transform:
   m_ObjectHideFlags: 0

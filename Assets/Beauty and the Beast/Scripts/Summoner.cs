@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.VFX;
 
 public class Summoner : MonoBehaviour
 {
     public GameObject Beauty;
     public GameObject Beast;
     public GameObject VFX;
+    private GameObject VFXInstance;
 
     private Texture2D pointCache;
     private float size;
@@ -16,6 +18,9 @@ public class Summoner : MonoBehaviour
     void Start()
     {
         this.summonning = false;
+        this.Beast.transform.position = this.Beauty.transform.position;
+        this.Beast.transform.rotation = this.Beauty.transform.rotation;
+        this.Beast.SetActive(false);
     }
     
     void Update()
@@ -29,14 +34,18 @@ public class Summoner : MonoBehaviour
     private IEnumerator Summon()
     {
         this.summonning = true;
-        float minClippingLevel = 0;
+        float minClippingLevel = -1;
         float maxClippingLevel = 2;
         float clippingLevel = maxClippingLevel;
+        this.Beauty.SetActive(true);
+        this.VFXInstance = Instantiate(this.VFX);
+        this.VFXInstance.transform.position = this.Beauty.transform.position;
+        this.VFXInstance.transform.rotation = this.Beauty.transform.rotation;
         while (clippingLevel > minClippingLevel)
         {
             this.UpdateSize(this.Beauty);
             this.UpdateCachePoint(this.Beauty);
-            clippingLevel -= Mathf.Abs(maxClippingLevel - minClippingLevel) / 2 * Time.deltaTime;
+            clippingLevel -= Mathf.Abs(maxClippingLevel - minClippingLevel) / 5 * Time.deltaTime;
             SkinnedMeshRenderer[] renderers = this.Beauty.GetComponentsInChildren<SkinnedMeshRenderer>();
             foreach (SkinnedMeshRenderer renderer in renderers)
             {
@@ -44,17 +53,24 @@ public class Summoner : MonoBehaviour
                 {
                     material.SetFloat("_ClippingLevel", clippingLevel);
                 }
+
             }
+            this.VFXInstance.GetComponent<VisualEffect>().SetTexture("PointCache", this.pointCache);
+            this.VFXInstance.GetComponent<VisualEffect>().SetFloat("Size", this.size);
+            this.VFXInstance.GetComponent<VisualEffect>().SetFloat("ClippingLevel", clippingLevel - 0.5f);
+            this.VFXInstance.GetComponent<VisualEffect>().SetBool("Emit", true);
             yield return 0;
         }
-        yield return new WaitForSeconds(1);
-        minClippingLevel = 0;
+        this.Beauty.SetActive(false);
+        yield return new WaitForSeconds(3);
+        minClippingLevel = -1;
         maxClippingLevel = 3;
+        this.Beast.SetActive(true);
         while (clippingLevel < maxClippingLevel)
         {
             this.UpdateSize(this.Beast);
             this.UpdateCachePoint(this.Beast);
-            clippingLevel += Mathf.Abs(maxClippingLevel - minClippingLevel) / 2 * Time.deltaTime;
+            clippingLevel += Mathf.Abs(maxClippingLevel - minClippingLevel) / 10 * Time.deltaTime;
             SkinnedMeshRenderer[] renderers = this.Beast.GetComponentsInChildren<SkinnedMeshRenderer>();
             foreach (SkinnedMeshRenderer renderer in renderers)
             {
@@ -63,6 +79,10 @@ public class Summoner : MonoBehaviour
                     material.SetFloat("_ClippingLevel", clippingLevel);
                 }
             }
+            this.VFXInstance.GetComponent<VisualEffect>().SetTexture("PointCache", this.pointCache);
+            this.VFXInstance.GetComponent<VisualEffect>().SetFloat("Size", this.size);
+            this.VFXInstance.GetComponent<VisualEffect>().SetFloat("ClippingLevel", clippingLevel);
+            this.VFXInstance.GetComponent<VisualEffect>().SetBool("Emit", false);
             yield return 0;
         }
         yield return new WaitForSeconds(1);
