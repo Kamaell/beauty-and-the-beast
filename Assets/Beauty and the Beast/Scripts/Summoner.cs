@@ -9,6 +9,8 @@ public class Summoner : MonoBehaviour
     public GameObject Beast;
     public GameObject VFX;
     private GameObject VFXInstance;
+    public Light Light;
+    public Texture2D LightColor;
 
     private Texture2D pointCache;
     private float size;
@@ -33,6 +35,7 @@ public class Summoner : MonoBehaviour
 
     private IEnumerator Summon()
     {
+        float lightStep = 0;
         this.summonning = true;
         float minClippingLevel = -1;
         float maxClippingLevel = 2;
@@ -41,11 +44,13 @@ public class Summoner : MonoBehaviour
         this.VFXInstance = Instantiate(this.VFX);
         this.VFXInstance.transform.position = this.Beauty.transform.position;
         this.VFXInstance.transform.rotation = this.Beauty.transform.rotation;
+        this.Light.transform.position = this.Beauty.transform.position + new Vector3(0, 3, 0);
         while (clippingLevel > minClippingLevel)
         {
             this.UpdateSize(this.Beauty);
             this.UpdateCachePoint(this.Beauty);
             clippingLevel -= Mathf.Abs(maxClippingLevel - minClippingLevel) / 5 * Time.deltaTime;
+            lightStep = Mathf.Abs(maxClippingLevel - clippingLevel) / Mathf.Abs(maxClippingLevel - minClippingLevel) * 0.5f;
             SkinnedMeshRenderer[] renderers = this.Beauty.GetComponentsInChildren<SkinnedMeshRenderer>();
             foreach (SkinnedMeshRenderer renderer in renderers)
             {
@@ -59,6 +64,7 @@ public class Summoner : MonoBehaviour
             this.VFXInstance.GetComponent<VisualEffect>().SetFloat("Size", this.size);
             this.VFXInstance.GetComponent<VisualEffect>().SetFloat("ClippingLevel", clippingLevel - 0.5f);
             this.VFXInstance.GetComponent<VisualEffect>().SetBool("Emit", true);
+            this.Light.color = LightColor.GetPixel((int)(lightStep * LightColor.width), (int)(0.5f * LightColor.width));
             yield return 0;
         }
         this.Beauty.SetActive(false);
@@ -71,6 +77,7 @@ public class Summoner : MonoBehaviour
             this.UpdateSize(this.Beast);
             this.UpdateCachePoint(this.Beast);
             clippingLevel += Mathf.Abs(maxClippingLevel - minClippingLevel) / 10 * Time.deltaTime;
+            lightStep = (1 - Mathf.Abs(maxClippingLevel - clippingLevel) / Mathf.Abs(maxClippingLevel - minClippingLevel)) * 0.5f + 0.5f;
             SkinnedMeshRenderer[] renderers = this.Beast.GetComponentsInChildren<SkinnedMeshRenderer>();
             foreach (SkinnedMeshRenderer renderer in renderers)
             {
@@ -83,6 +90,7 @@ public class Summoner : MonoBehaviour
             this.VFXInstance.GetComponent<VisualEffect>().SetFloat("Size", this.size);
             this.VFXInstance.GetComponent<VisualEffect>().SetFloat("ClippingLevel", clippingLevel);
             this.VFXInstance.GetComponent<VisualEffect>().SetBool("Emit", false);
+            this.Light.color = LightColor.GetPixel((int)(lightStep * LightColor.width), (int)(0.5f * LightColor.width));
             yield return 0;
         }
         yield return new WaitForSeconds(1);
