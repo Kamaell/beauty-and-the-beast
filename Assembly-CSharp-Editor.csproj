@@ -718,6 +718,18 @@
       <Project>{3FD719AD-61A2-A3EA-ABB0-BBA7D4BF8BB3}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Recorder.Editor.csproj">
+      <Project>{B4E8DDCF-679D-33D1-7BB7-A939DB408165}</Project>
+      <Name>Unity.Recorder.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Recorder.csproj">
+      <Project>{63666E90-47E0-BDA5-8E95-D34EA6D87B82}</Project>
+      <Name>Unity.Recorder</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Recorder.Samples.csproj">
+      <Project>{21D171B6-2730-F267-4667-50C9CDC6E2FE}</Project>
+      <Name>Unity.Recorder.Samples</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
