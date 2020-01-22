@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Beauty and the Beast\Scripts\Summoner.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Shadow of the Road\Fire\Fire.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Reference Include="Unity.RenderPipelines.Core.Editor">
       <HintPath>D:/Beauty and the Beast/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
